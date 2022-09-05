@@ -1,0 +1,79 @@
+.text {
+  color: #293264;
+  font-family: 'karla', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.button-text {
+  color: #f5f7fb;
+  font-family: 'inter', sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f5f7fb;
+}
+
+.quizzical {
+  padding: 5rem;
+  display: grid;
+  gap: 0.7rem;
+  text-align: center;
+
+  background: #e7eefa;
+  border-radius: 10px;
+}
+
+.btn {
+  margin-top: 1.12rem;
+
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem;
+  background: #4d5b9e;
+  color: #f5f7fb;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #394891;
+}
+
+/*------------------------ Questions Css -------------------------*/
+
+.quizzical-questions {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  gap: 0.794375rem;
+  margin-top: 0.885625rem;
+}
+
+.quizzical-questions > .question > .options > span {
+  display: inline-flex;
+  padding: 0.3rem;
+
+  color: #293264;
+  border: 1px solid #4d5b9e;
+  border-radius: 7.94239px;
+
+  cursor: pointer;
+}
