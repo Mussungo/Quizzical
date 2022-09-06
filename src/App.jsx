@@ -1,19 +1,23 @@
 import React from "react"
 import "./App.css"
 import Question from "../Components/Question"
+import { nanoid } from "nanoid"
 
 export default function App() {
   const [quizState, setQuizState] = React.useState(false)
+  const [quiz, setQuiz] = React.useState([])
   const [questions, setQuestions] = React.useState([])
+  const [isSubmited, setIsSubmited] = React.useState(true)
 
   React.useEffect(() => {
     fetch("https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=multiple")
         .then(response => response.json())
-        .then(data => setQuestions(data.results))
+        .then(data => setQuiz(data.results))
   },[])
-  console.log(questions)
-  const quiz = questions.map(question => {
-    return (<Question question={question.question}/>)
+
+  const quiz_Elements = quiz.map(question => {
+    let id = nanoid()
+    return (<Question key={id} id={id} question={question.question} correct_answer={question.correct_answer} incorrect_answers={question.incorrect_answers} isSubmited={isSubmited}/>)
   })
   return(
     <div className="container">
@@ -26,7 +30,8 @@ export default function App() {
         </div>
         :
         <div className="quizzical-questions">
-          {quiz}
+          {quiz_Elements}
+          <button className="btn">Check Answers</button>
         </div>
       }
     </div>

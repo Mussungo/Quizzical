@@ -1,12 +1,12 @@
+.title {
+  font-size: 2rem;
+}
+
 .text {
   color: #293264;
   font-family: 'karla', sans-serif;
   font-weight: 700;
-  font-size: 1rem;
-}
-
-.title {
-  font-size: 2rem;
+  font-size: 1.4rem;
 }
 
 .button-text {
@@ -54,10 +54,14 @@
 /*------------------------ Questions Css -------------------------*/
 
 .quizzical-questions {
-  display: grid;
-  align-items: center;
-  justify-items: center;
+  height: 90vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+}
+
+.question {
 }
 
 .options {
