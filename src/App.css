@@ -1,5 +1,16 @@
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #dbdef0;
+}
+
 .title {
   font-size: 2rem;
+}
+
+.title.center {
+  text-align: center;
 }
 
 .text {
@@ -43,8 +54,12 @@
   border-radius: 10px;
   padding: 0.8rem;
   background: #4d5b9e;
-  color: #f5f7fb;
+  color: white;
   cursor: pointer;
+}
+
+.btn-small {
+  margin: 0;
 }
 
 .btn:hover {
@@ -54,14 +69,13 @@
 /*------------------------ Questions Css -------------------------*/
 
 .quizzical-questions {
-  height: 90vh;
-  width: 80%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 2rem;
-}
+  padding: 3rem;
 
-.question {
+  background: #e9eef8;
 }
 
 .options {
@@ -73,11 +87,36 @@
 
 .quizzical-questions > .question > .options > span {
   display: inline-flex;
-  padding: 0.3rem;
+  padding: 0.4rem;
 
   color: #293264;
   border: 1px solid #4d5b9e;
   border-radius: 7.94239px;
 
   cursor: pointer;
+}
+
+.play-again {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.chosen {
+  background: #c7cef3;
+  background: #b8c3fa;
+  color: white;
+}
+
+.opaccity {
+  opacity: 0.7;
+}
+.correct {
+  background: #94d7a2;
+  opacity: 1;
+}
+
+.wrong {
+  background: #f8bcbc;
 }
