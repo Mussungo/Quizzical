@@ -1,7 +1,7 @@
 {
+  "homepage": "https://Mussungo.gihub.io/Quizzical",
   "name": "quizzical",
   "private": true,
-  "homepage": "https://github.com/Mussungo/Quizzical",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
