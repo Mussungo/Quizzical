@@ -10,7 +10,7 @@ export default function App() {
   const [score, setScore] = React.useState(0)
 
   React.useEffect(() => {
-    fetch("https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=multiple")
+    fetch("https://opentdb.com/api.php?amount=5&category=18&difficulty=hard&type=multiple")
         .then(response => response.json())
         .then(data => setQuiz(data.results))
   },[quizState])
